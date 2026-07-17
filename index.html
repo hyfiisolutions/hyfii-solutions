@@ -1,226 +1,1091 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYFII SOLUTIONS - India | 100% Placement Assurance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-<title>Hyfii Solutions | IT Services & Training</title>
+        :root {
+            --primary: #1a73e8;
+            --secondary: #185a9d;
+            --accent: #43cea2;
+            --light: #f8f9fa;
+            --dark: #333;
+            --success: #28a745;
+            --placement: #ff6b6b;
+            --whatsapp: #25D366;
+        }
 
-<meta name="description" content="Hyfii Solutions provides IT Services, Cloud Computing, Internship Programs and Software Training.">
+        body {
+            background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
-}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-body{
-    background:#f4f7fb;
-    color:#333;
-}
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
 
-header{
-    background:#0b3d91;
-    color:white;
-    padding:20px;
-}
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.container{
-    width:90%;
-    max-width:1100px;
-    margin:auto;
-}
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-nav{
-    float:right;
-}
+        .logo i {
+            font-size: 2rem;
+            color: var(--accent);
+        }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    font-weight:bold;
-}
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
 
-.hero{
-    text-align:center;
-    padding:80px 20px;
-    background:white;
-}
+        .logo span {
+            color: var(--accent);
+        }
 
-.hero h1{
-    color:#0b3d91;
-    font-size:45px;
-}
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
 
-.hero p{
-    margin:20px 0;
-    font-size:18px;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
 
-.btn{
-    display:inline-block;
-    background:#0b3d91;
-    color:white;
-    padding:12px 30px;
-    text-decoration:none;
-    border-radius:5px;
-}
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
 
-section{
-    padding:60px 20px;
-}
+        .cta-button {
+            background-color: var(--accent);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
 
-h2{
-    color:#0b3d91;
-    text-align:center;
-    margin-bottom:30px;
-}
+        .cta-button:hover {
+            background-color: #3bb992;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
 
-.cards{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-}
+        .whatsapp-button {
+            background-color: var(--whatsapp);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
 
-.card{
-    background:white;
-    width:250px;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
+        .whatsapp-button:hover {
+            background-color: #20b858;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
 
-.card h3{
-    color:#0b3d91;
-    margin-bottom:10px;
-}
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
 
-.contact{
-    text-align:center;
-}
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-.contact p{
-    margin:10px;
-    font-size:18px;
-}
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
 
-footer{
-    background:#0b3d91;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-</style>
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
 
+        .placement-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--placement), #ff8e8e);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        /* Courses Section */
+        .courses {
+            padding: 80px 0;
+            background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+        }
+
+        .course-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .course-img {
+            height: 180px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+        }
+
+        .course-content {
+            padding: 25px;
+        }
+
+        .course-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .course-content ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .course-content li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .course-content li i {
+            color: var(--accent);
+            margin-right: 10px;
+        }
+
+        /* Partners Section */
+        .partners {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .partner-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .partner-logo {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        .partner-card h3 {
+            font-size: 1.2rem;
+            color: var(--secondary);
+        }
+
+        /* Success Stories Section */
+        .success-stories {
+            padding: 80px 0;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        .success-stories .section-title h2 {
+            color: white;
+            font-size: 2.8rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .success-stories .section-title p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .story-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .story-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .student-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .student-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+            margin-right: 20px;
+        }
+
+        .student-details h3 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+
+        .student-details p {
+            opacity: 0.8;
+        }
+
+        .story-content {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .placement-info {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .placement-info i {
+            color: var(--accent);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .contact-details {
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: var(--primary);
+        }
+
+        .contact-form h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
+        .google-form-container {
+            width: 100%;
+            height: 800px;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .placement-badge {
+                font-size: 1.2rem;
+                padding: 12px 25px;
+            }
+            
+            .google-form-container {
+                height: 600px;
+            }
+        }
+    </style>
 </head>
-
 <body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h1>HYFII SOLUTIONS</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#partners">Partners</a></li>
+                        <li><a href="#success">Success Stories</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <a href="#contact" class="cta-button">Enroll Now</a>
+            </div>
+        </div>
+    </header>
 
-<header>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Launch Your Tech Career with HYFII SOLUTIONS</h2>
+                <p>Industry-focused courses with 100% Placement Assurance</p>
+                <div class="placement-badge">
+                    <i class="fas fa-check-circle"></i> 100% Placement Assurance
+                </div>
+                <p>Join India's fastest-growing tech education platform and secure your future in IT</p>
+                <div class="hero-buttons">
+                    <a href="#courses" class="cta-button">Explore Courses</a>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="container">
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose HYFII SOLUTIONS?</h2>
+                <p>We provide comprehensive tech education with industry-relevant curriculum</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Industry-Ready Curriculum</h3>
+                    <p>Learn the most in-demand skills with courses designed by industry experts</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>100% Placement Assurance</h3>
+                    <p>Get placed within 6 months of course completion or get 100% fee refund</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Expert Instructors</h3>
+                    <p>Learn from industry professionals with 10+ years of experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<h1 style="display:inline;">HYFII SOLUTIONS</h1>
+    <!-- Courses Section -->
+    <section class="courses" id="courses">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Popular Courses</h2>
+                <p>Choose from our industry-leading courses with 100% placement assurance</p>
+            </div>
+            <div class="course-cards">
+                <div class="course-card">
+                    <div class="course-img">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>AWS Cloud Practitioner</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> 90 Hours Online Course</li>
+                            <li><i class="fas fa-check"></i> Hands-on 5 Projects</li>
+                            <li><i class="fas fa-check"></i> Internship Certificate</li>
+                            <li><i class="fas fa-check"></i> 100% Placement Assurance</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-img">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Data Analytics with AI</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Learn Analytics & AI Techniques</li>
+                            <li><i class="fas fa-check"></i> Projects & Practical Training</li>
+                            <li><i class="fas fa-check"></i> IC + CC Certificates</li>
+                            <li><i class="fas fa-check"></i> 100% Placement Assurance</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-img">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Data Engineering</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Build Data Pipelines & ETL Skills</li>
+                            <li><i class="fas fa-check"></i> Hands-on Projects</li>
+                            <li><i class="fas fa-check"></i> IC + CC Certificates</li>
+                            <li><i class="fas fa-check"></i> 100% Placement Assurance</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-img">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Python Programming</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Programming Fundamentals & Advanced Python</li>
+                            <li><i class="fas fa-check"></i> Projects & Practical Implementation</li>
+                            <li><i class="fas fa-check"></i> IC + CC Certificates</li>
+                            <li><i class="fas fa-check"></i> 100% Placement Assurance</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<nav>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-</nav>
+    <!-- Partners Section -->
+    <section class="partners" id="partners">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Hiring Partners</h2>
+                <p>We partner with leading Indian IT companies for placements</p>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3>Infosys</h3>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>TCS</h3>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Wipro</h3>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>HCL Technologies</h3>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Tech Mahindra</h3>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Mindtree</h3>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Zoho</h3>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Flipkart</h3>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Byju's</h3>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Freshworks</h3>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Ola</h3>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Swiggy</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div style="clear:both;"></div>
+    <!-- Success Stories Section -->
+    <section class="success-stories" id="success">
+        <div class="container">
+            <div class="section-title">
+                <h2>Success Stories</h2>
+                <p>Our students have transformed their careers with HYFII SOLUTIONS/p>
+            </div>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="student-info">
+                        <div class="student-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="student-details">
+                            <h3>Priya Sharma</h3>
+                            <p>Data Analytics Course</p>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        "HYFII SOLUTIONS transformed my career. After completing the Data Analytics course, I got placed at TCS with a 70% salary hike. The practical projects were incredibly helpful!"
+                    </div>
+                    <div class="placement-info">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Placed at: TCS (Data Analyst)</span>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="student-info">
+                        <div class="student-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="student-details">
+                            <h3>Rahul Verma</h3>
+                            <p>AWS Cloud Course</p>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        "The AWS Cloud course at HYFII SOLUTIONS gave me the confidence to switch from a non-tech background to cloud engineering. Got placed at Infosys within 2 months of course completion."
+                    </div>
+                    <div class="placement-info">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Placed at: Infosys (Cloud Engineer)</span>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="student-info">
+                        <div class="student-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="student-details">
+                            <h3>Anjali Patel</h3>
+                            <p>Data Engineering Course</p>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        "As a fresh graduate, I was struggling to find a job. HYFII SOLUTIONS's Data Engineering course and placement assistance helped me secure a position at Wipro with a great package."
+                    </div>
+                    <div class="placement-info">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Placed at: Wipro (Data Engineer)</span>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="student-info">
+                        <div class="student-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="student-details">
+                            <h3>Vikram Singh</h3>
+                            <p>Python Programming Course</p>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        "The Python course at HYFII SOLUTIONS was comprehensive and industry-focused. The instructors were amazing, and I received multiple job offers before course completion."
+                    </div>
+                    <div class="placement-info">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Placed at: HCL (Python Developer)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</div>
+    <section class="college-training">
+    <div class="container">
 
-</header>
+        <div class="section-title">
+            <h2>College Training & Placement Opportunities</h2>
+            <p>
+                HYFII SOLUTIONS partners with colleges and universities to deliver
+                industry-focused training programs, internships, and placement
+                assistance that prepare students for successful careers in IT.
+            </p>
+        </div>
 
-<section class="hero">
+        <div class="college-content">
 
-<h1>Innovate. Learn. Transform.</h1>
+            <div class="college-card">
+                <i class="fas fa-university"></i>
+                <h3>Campus Training Programs</h3>
+                <p>
+                    We conduct on-campus and online technical training for
+                    engineering, degree, and diploma students with practical
+                    learning and industry-oriented curriculum.
+                </p>
+            </div>
 
-<p>Professional IT Services, AWS Cloud Training, Internship Programs & Software Development.</p>
+            <div class="college-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Industry Skill Development</h3>
+                <p>
+                    Students receive hands-on experience through live projects,
+                    coding sessions, workshops, hackathons, and real-world case
+                    studies in the latest technologies.
+                </p>
+            </div>
 
-<a class="btn" href="#contact">Contact Us</a>
+            <div class="college-card">
+                <i class="fas fa-user-graduate"></i>
+                <h3>Internship Opportunities</h3>
+                <p>
+                    We provide internship opportunities that help students gain
+                    practical experience and improve their technical and
+                    professional skills before graduation.
+                </p>
+            </div>
 
+            <div class="college-card">
+                <i class="fas fa-briefcase"></i>
+                <h3>Placement Assistance</h3>
+                <p>
+                    Our placement support includes resume building, aptitude
+                    training, mock interviews, technical interview preparation,
+                    and connections with hiring companies.
+                </p>
+            </div>
+
+            <div class="college-card">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h3>Faculty Development Programs</h3>
+                <p>
+                    We also conduct Faculty Development Programs (FDPs) and
+                    technology workshops to keep educators updated with current
+                    industry trends and emerging technologies.
+                </p>
+            </div>
+
+            <div class="college-card">
+                <i class="fas fa-handshake"></i>
+                <h3>College Collaboration</h3>
+                <p>
+                    HYFII SOLUTIONS collaborates with educational institutions
+                    to bridge the gap between academics and industry by providing
+                    comprehensive training, internships, certifications, and
+                    placement support.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
 </section>
 
-<section id="about">
-
-<h2>About Us</h2>
-
-<div class="container">
-
-<p style="text-align:center;">
-Hyfii Solutions is an EdTech and IT company providing quality training,
-industry internships, cloud computing solutions and software development
-services to students and businesses.
-</p>
-
-</div>
-
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Contact us to start your tech career journey</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p>Reach out to us for course details, counseling, or any queries</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Our Location</h3>
+                                <p>Bangalore, Karnataka, India</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h3>Phone Number</h3>
+                                <p>+91 9886771004</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email Address</h3>
+                                <p>hyfiisolutions@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <section class="enquiry-form">
+   
 </section>
+               
 
-<section id="services">
-
-<h2>Our Services</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>AWS Cloud</h3>
-<p>Hands-on AWS cloud training and consulting.</p>
+   
 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="card">
-<h3>Internships</h3>
-<p>Industry-based internship programs with certification.</p>
-</div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>HYFII SOLUTIONS</h3>
+                    <p>India's leading tech education platform with 100% placement assurance. Transforming careers through industry-relevant courses.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#partners">Partners</a></li>
+                        <li><a href="#success">Success Stories</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Courses</h3>
+                    <ul class="footer-links">
+                        <li><a href="#contact">AWS Cloud Practitioner</a></li>
+                        <li><a href="#contact">Data Analytics with AI</a></li>
+                        <li><a href="#contact">Data Engineering</a></li>
+                        <li><a href="#contact">Python Programming</a></li>
+                        <li><a href="#contact">Full Stack Development</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Bangalore, India</li>
+                        <li><i class="fas fa-phone-alt"></i> +91 9886771004</li>
+                        <li><i class="fas fa-envelope"></i> hyfiisolutions@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 hyfiisolutions@gmail.com. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-<div class="card">
-<h3>Web Development</h3>
-<p>Modern websites and web applications.</p>
-</div>
-
-<div class="card">
-<h3>Software Training</h3>
-<p>Python, Java, Full Stack, AI, Data Science and more.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2>Contact Us</h2>
-
-<div class="contact">
-
-<p>📞 +91 9886771004</p>
-
-<p>📧 info.hyfiisolutions@gmail.com</p>
-
-<p>📍 Bangalore, India</p>
-
-<br>
-
-<a class="btn" href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" target="_blank">
-Apply / Contact Now
-</a>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>© 2026 Hyfii Solutions. All Rights Reserved.</p>
-
-</footer>
-
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
