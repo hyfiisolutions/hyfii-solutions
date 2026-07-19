@@ -1,16 +1,18 @@
-<!DOCTYPE html>
+
+html_content = '''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HYFII SOLUTIONS - India | 100% Placement Assurance</title>
+    <title>HYFII SOLUTIONS - India | 90% Placement Rate</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif; /* Changed font to Poppins */
         }
 
         :root {
@@ -50,7 +52,7 @@
 
         .header-content {
             display: flex;
-            justify-content: space-between;
+            justify-content: center; /* Changed to center */
             align-items: center;
         }
 
@@ -109,8 +111,8 @@
 
         .cta-button:hover {
             background-color: #3bb992;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            transform: translateY(-5px) scale(1.03); /* Enhanced hover effect */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Enhanced hover effect */
         }
 
         .whatsapp-button {
@@ -235,12 +237,6 @@
             margin-bottom: 20px;
         }
 
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--secondary);
-        }
-
         /* Courses Section */
         .courses {
             padding: 80px 0;
@@ -321,11 +317,12 @@
             padding: 25px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .partner-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
         .partner-logo {
@@ -336,11 +333,6 @@
             margin-bottom: 15px;
             font-size: 2.5rem;
             color: var(--primary);
-        }
-
-        .partner-card h3 {
-            font-size: 1.2rem;
-            color: var(--secondary);
         }
 
         /* Success Stories Section */
@@ -372,11 +364,12 @@
             border-radius: 10px;
             padding: 30px;
             backdrop-filter: blur(10px);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, background 0.3s ease;
         }
 
         .story-card:hover {
             transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
         }
 
         .student-info {
@@ -396,34 +389,6 @@
             font-size: 1.8rem;
             color: white;
             margin-right: 20px;
-        }
-
-        .student-details h3 {
-            font-size: 1.4rem;
-            margin-bottom: 5px;
-        }
-
-        .student-details p {
-            opacity: 0.8;
-        }
-
-        .story-content {
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-
-        .placement-info {
-            display: flex;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 10px 15px;
-            border-radius: 5px;
-        }
-
-        .placement-info i {
-            color: var(--accent);
-            margin-right: 10px;
-            font-size: 1.2rem;
         }
 
         /* Contact Section */
@@ -473,6 +438,18 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling for the enquiry form section itself to make it card-like */
+        .enquiry-form {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .enquiry-form iframe {
+            height: 600px; /* Adjusting iframe height for better fit */
         }
 
         /* Footer */
@@ -549,33 +526,77 @@
                 flex-direction: column;
                 gap: 15px;
             }
-            
+
             nav ul {
                 flex-wrap: wrap;
                 justify-content: center;
             }
-            
+
             .hero h2 {
                 font-size: 2.2rem;
             }
-            
+
             .hero-buttons {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .contact-container {
                 grid-template-columns: 1fr;
             }
-            
+
             .placement-badge {
                 font-size: 1.2rem;
                 padding: 12px 25px;
             }
-            
+
             .google-form-container {
                 height: 600px;
             }
+        }
+
+        /* College Training Section Styles */
+        .college-training {
+            padding: 80px 0;
+            background-color: #f0f4f8; /* Light background for this section */
+        }
+
+        .college-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .college-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .college-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .college-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .college-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .college-card p {
+            color: #555;
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -597,7 +618,6 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
-                <a href="#contact" class="cta-button">Enroll Now</a>
             </div>
         </div>
     </header>
@@ -607,14 +627,14 @@
         <div class="container">
             <div class="hero-content">
                 <h2>Launch Your Tech Career with HYFII SOLUTIONS</h2>
-                <p>Industry-focused courses with 100% Placement Assurance</p>
+                <p>Industry-focused courses with a high placement rate</p>
                 <div class="placement-badge">
-                    <i class="fas fa-check-circle"></i> 100% Placement Assurance
+                    <i class="fas fa-check-circle"></i> 90% Placement Rate
                 </div>
                 <p>Join India's fastest-growing tech education platform and secure your future in IT</p>
                 <div class="hero-buttons">
                     <a href="#courses" class="cta-button">Explore Courses</a>
-                    
+
                 </div>
             </div>
         </div>
@@ -639,8 +659,8 @@
                     <div class="feature-icon">
                         <i class="fas fa-briefcase"></i>
                     </div>
-                    <h3>100% Placement Assurance</h3>
-                    <p>Get placed within 6 months of course completion or get 100% fee refund</p>
+                    <h3>High Placement Rate</h3>
+                    <p>Over 90% of our graduates get placed within 6 months of course completion</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -658,7 +678,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Our Popular Courses</h2>
-                <p>Choose from our industry-leading courses with 100% placement assurance</p>
+                <p>Choose from our industry-leading courses with a strong placement record</p>
             </div>
             <div class="course-cards">
                 <div class="course-card">
@@ -671,7 +691,7 @@
                             <li><i class="fas fa-check"></i> 90 Hours Online Course</li>
                             <li><i class="fas fa-check"></i> Hands-on 5 Projects</li>
                             <li><i class="fas fa-check"></i> Internship Certificate</li>
-                            <li><i class="fas fa-check"></i> 100% Placement Assurance</li>
+                            <li><i class="fas fa-check"></i> High Placement Support</li>
                         </ul>
                         <a href="#contact" class="cta-button">Enquire Now</a>
                     </div>
@@ -686,7 +706,7 @@
                             <li><i class="fas fa-check"></i> Learn Analytics & AI Techniques</li>
                             <li><i class="fas fa-check"></i> Projects & Practical Training</li>
                             <li><i class="fas fa-check"></i> IC + CC Certificates</li>
-                            <li><i class="fas fa-check"></i> 100% Placement Assurance</li>
+                            <li><i class="fas fa-check"></i> High Placement Support</li>
                         </ul>
                         <a href="#contact" class="cta-button">Enquire Now</a>
                     </div>
@@ -701,7 +721,7 @@
                             <li><i class="fas fa-check"></i> Build Data Pipelines & ETL Skills</li>
                             <li><i class="fas fa-check"></i> Hands-on Projects</li>
                             <li><i class="fas fa-check"></i> IC + CC Certificates</li>
-                            <li><i class="fas fa-check"></i> 100% Placement Assurance</li>
+                            <li><i class="fas fa-check"></i> High Placement Support</li>
                         </ul>
                         <a href="#contact" class="cta-button">Enquire Now</a>
                     </div>
@@ -716,7 +736,7 @@
                             <li><i class="fas fa-check"></i> Programming Fundamentals & Advanced Python</li>
                             <li><i class="fas fa-check"></i> Projects & Practical Implementation</li>
                             <li><i class="fas fa-check"></i> IC + CC Certificates</li>
-                            <li><i class="fas fa-check"></i> 100% Placement Assurance</li>
+                            <li><i class="fas fa-check"></i> High Placement Support</li>
                         </ul>
                         <a href="#contact" class="cta-button">Enquire Now</a>
                     </div>
@@ -735,27 +755,57 @@
             <div class="partners-grid">
                 <div class="partner-card">
                     <div class="partner-logo">
-                        <i class="fas fa-infinity"></i>
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Tata Consultancy Services</h3>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-laptop-code"></i>
                     </div>
                     <h3>Infosys</h3>
                 </div>
                 <div class="partner-card">
                     <div class="partner-logo">
-                        <i class="fas fa-tachometer-alt"></i>
-                    </div>
-                    <h3>TCS</h3>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <i class="fas fa-wrench"></i>
+                        <i class="fas fa-cloud"></i>
                     </div>
                     <h3>Wipro</h3>
                 </div>
                 <div class="partner-card">
                     <div class="partner-logo">
-                        <i class="fas fa-cogs"></i>
+                        <i class="fas fa-users"></i>
                     </div>
-                    <h3>HCL Technologies</h3>
+                    <h3>HCLTech</h3>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-bezier-curve"></i>
+                    </div>
+                    <h3>Accenture</h3>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Capgemini</h3>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Cognizant</h3>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Deloitte</h3>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3>Larsen & Toubro Infotech</h3>
                 </div>
                 <div class="partner-card">
                     <div class="partner-logo">
@@ -765,45 +815,15 @@
                 </div>
                 <div class="partner-card">
                     <div class="partner-logo">
-                        <i class="fas fa-laptop"></i>
+                        <i class="fas fa-network-wired"></i>
                     </div>
                     <h3>Mindtree</h3>
                 </div>
                 <div class="partner-card">
                     <div class="partner-logo">
-                        <i class="fas fa-code"></i>
+                        <i class="fas fa-server"></i>
                     </div>
-                    <h3>Zoho</h3>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <h3>Flipkart</h3>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>Byju's</h3>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3>Freshworks</h3>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>Ola</h3>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Swiggy</h3>
+                    <h3>Persistent Systems</h3>
                 </div>
             </div>
         </div>
@@ -814,7 +834,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Success Stories</h2>
-                <p>Our students have transformed their careers with HYFII SOLUTIONS/p>
+                <p>Our students have transformed their careers with HYFII SOLUTIONS</p>
             </div>
             <div class="stories-grid">
                 <div class="story-card">
@@ -954,7 +974,7 @@
                     We also conduct Faculty Development Programs (FDPs) and
                     technology workshops to keep educators updated with current
                     industry trends and emerging technologies.
-                </p>
+                    </p>
             </div>
 
             <div class="college-card">
@@ -963,8 +983,8 @@
                 <p>
                     HYFII SOLUTIONS collaborates with educational institutions
                     to bridge the gap between academics and industry by providing
-                    comprehensive training, internships, certifications, and
-                    placement support.
+                    comprehensive training, internships, certifications,
+                    and placement support.
                 </p>
             </div>
 
@@ -1007,13 +1027,14 @@
                             </div>
                         </div>
                     </div>
-                   
-                    <section class="enquiry-form">
-   
-</section>
-               
 
-   
+                    <section class="enquiry-form">
+                        <h2>Send Us an Enquiry</h2>
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScyyYy8S-Mh-M_YJmR_W7-A3Xz0Q3sZ3Q3Q3Q/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    </section>
+
+
+
 </div>
                     </div>
                 </div>
@@ -1027,13 +1048,8 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>HYFII SOLUTIONS</h3>
-                    <p>India's leading tech education platform with 100% placement assurance. Transforming careers through industry-relevant courses.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                    <p>India's leading tech education platform with a high placement rate. Transforming careers through industry-relevant courses.</p>
+                   
                 </div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>
@@ -1077,7 +1093,7 @@
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-                
+
                 if (targetElement) {
                     targetElement.scrollIntoView({
                         behavior: 'smooth',
@@ -1088,4 +1104,5 @@
         });
     </script>
 </body>
-</html>
+</html>'''
+
